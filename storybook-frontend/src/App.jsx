@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { Route,Routes } from 'react-router-dom'
+import Login from './pages/login'
+import Dashboard from './pages/dashboard'
+import Register from './pages/register'
 import './App.css'
 
 function App() {
@@ -9,11 +10,11 @@ function App() {
 
   return (
     <>
-    <div className='min-h-screen flex items-center justify-center bg-slate-400'>
-      <h1 className='text-4xl font-bold text-blue-600'>
-        Tailwind is Working!
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/login" element={<Login/>}></Route>
+      <Route path="/register" element={<Register/>}></Route>
+      <Route path="/dashboard" element={<Dashboard/>}></Route>
+    </Routes>
     </>
   )
 }
