@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     #local apps
     "users",
     "authentication",
+    "stories",
 ]
 
 MIDDLEWARE = [
