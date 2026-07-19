@@ -17,8 +17,8 @@ function Login() {
         username,
         password,
       });
-      localStorage.setItem("refresh", response.data.access);
-      localStorage.setItem("refresh", response.data.access);
+      localStorage.setItem("access", response.data.access);
+      localStorage.setItem("refresh", response.data.refresh);
       navigate("/dashboard");
     } catch (err) {
       setError("Invalid username or password");
